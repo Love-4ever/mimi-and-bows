@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — Mimi & Bows 🎀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <canvas id="sparkle-canvas"></canvas>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#FF7AB6"/>
+          <text x="50%" y="54%" text-anchor="middle" fill="#fff" font-family="Quicksand, sans-serif" font-weight="700" font-size="11">M&B</text>
+        </svg>
+      </a>
+      <span class="brand-text">Mimi & Bows 🎀</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="btn-accent">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">All Products</h2>
+    <div id="product-grid" class="grid"></div>
+  </main>
+
+  <audio id="bg-music" loop data-src="assets/audio/lofi.mp3"></audio>
+
+  <div id="product-modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <img id="modal-img" src="" alt="" />
+      <div id="modal-info">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc" class="small muted"></p>
+        <div class="price" id="modal-price"></div>
+        <div style="margin-top:10px">
+          <button class="btn" id="modal-add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/sparkles.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

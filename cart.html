@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cart — Mimi & Bows 🎀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/images/favicon.svg" />
+</head>
+<body>
+  <canvas id="sparkle-canvas"></canvas>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#FF7AB6"/>
+          <text x="50%" y="54%" text-anchor="middle" fill="#fff" font-family="Quicksand, sans-serif" font-weight="700" font-size="11">M&B</text>
+        </svg>
+      </a>
+      <span class="brand-text">Mimi & Bows 🎀</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Your Cart</h2>
+    <div id="cart-contents"></div>
+
+    <section class="checkout">
+      <h3>Checkout</h3>
+      <form id="checkout-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+        <label>
+          Full name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Address
+          <input type="text" name="address" required>
+        </label>
+
+        <!-- hidden cart payload -->
+        <input type="hidden" name="cart" id="cart-input">
+
+        <button type="submit" class="big-cta">Place Order</button>
+      </form>
+      <p class="muted">Replace <code>YOUR_FORM_ID</code> with your actual Formspree form ID (see README).</p>
+    </section>
+  </main>
+
+  <audio id="bg-music" loop data-src="assets/audio/lofi.mp3"></audio>
+
+  <script src="assets/js/sparkles.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
